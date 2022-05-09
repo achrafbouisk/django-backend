@@ -24,7 +24,7 @@ class Post(models.Model):
     # category = models.CharField(max_length=255)
     category =  models.ForeignKey(Category, on_delete=models.CASCADE)
     description = models.TextField()
-    image = models.FileField(upload_to="images", blank=True)
+    image_url = models.FileField(upload_to="images", blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     is_draft = models.BooleanField(default = True)

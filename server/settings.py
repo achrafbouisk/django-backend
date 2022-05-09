@@ -20,30 +20,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hcj(%wn(m0x-sgtuwr!^1um39=)qtumnqx!l2o_@_j7b#k6#&t'
+SECRET_KEY = 'server-insecure-hcj(%wn(m0x-sgtuwr!^1um39=)qtumnqx!l2o_@_j7b#k6#&t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 # Corsheaders settings
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = False
-# CORS_ALLOW_ORIGINS = [
-#     'http://loacalhost:19002',
-#     'http://loacalhost:19006',
-#     'http://loacalhost:19000',
-#     'exp://loacalhost:19000',
-#     'exp://10.0.0.2:19000',
-#     'http://10.0.0.2:19002',
-#     'http://10.0.0.2:19006',
-#     'http://10.0.0.2:19000',
-# ]
-# CORS_ORIGIN_WHITELIST = [
-#     'http://localhost:19002',
-# ]
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']
 REST_FRAMEWORK = {
     'DEFAULT_RUNDER_CLASSES':('rest_framework.renderrs.JSONRender',)
 }
@@ -146,3 +132,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CORS_ALLOW_ORIGINS = []
+# CORS_ORIGIN_WHITELIST = []
